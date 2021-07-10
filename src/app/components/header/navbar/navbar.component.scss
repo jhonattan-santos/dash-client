@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  min-height: 60px;
+
+  h1 {
+    color: #2D9040;
+    padding-left: 2rem;
+  }
+
+  .searchbox {
+    align-self: center;
+    margin: 0 auto;
+    background-color: #ECECEC;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 25px;
+    min-width: 260px;
+  }
+}
