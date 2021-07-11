@@ -1,21 +1,37 @@
+import { HttpClientModule } from '@angular/common/http';
 import { MirageserverService } from './helper/mirageserver.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/header/navbar/navbar.component';
-
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NewCustomerComponent } from './pages/new-customer/new-customer.component';
+import { ListCustomerComponent } from './pages/list-customer/list-customer.component';
+import { EditCustomerComponent } from './pages/edit-customer/edit-customer.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
+import { DeleteCustomerComponent } from './pages/delete-customer/delete-customer.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    SidebarComponent,
+    NewCustomerComponent,
+    ListCustomerComponent,
+    EditCustomerComponent,
+    DataTableComponent,
+    DeleteCustomerComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [MirageserverService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

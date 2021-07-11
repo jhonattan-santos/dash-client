@@ -26,7 +26,7 @@ export class MirageserverService {
               zipCode: 322280-888,
             }
           }]
-        })
+        });
       }
     });
   }

@@ -1,0 +1,24 @@
+#sidebar {
+  background-color: #c4d600;
+  max-width: 250px;
+  height: 100%;
+  padding-left: 1rem;
+  position: fixed;
+  min-width: 190px;
+  font-size: 1.2rem;
+
+  ul {
+    list-style: none;
+    li {
+      padding: 0.8rem 0;
+      font-weight: bold;
+      a {
+        color: #fff;
+        text-decoration: none;
+        &.active-link {
+          color: #2d9040;
+        }
+      }
+    }
+  }
+}
