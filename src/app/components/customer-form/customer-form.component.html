@@ -18,7 +18,7 @@
     <button *ngIf="!deleteMode" type="submit" class="success">
       {{editMode ? 'Salvar Alteraçãos' : 'Finalizar Cadastro'}}
     </button>
-    <div class="d-flex" *ngIf="deleteMode">
+    <div class="d-flex mobile-actions" *ngIf="deleteMode">
       <button (click)="cancel()" class="cancel">Cancelar</button>
       <button (click)="deleteCustomer()" class="danger">Confirmar Exclusão</button>
     </div>
