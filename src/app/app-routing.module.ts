@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: 'new',
     component: NewCustomerComponent,
+    pathMatch: 'full',
   },
   {
     path: 'edit/:id',
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: '',
     component: ListCustomerComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];
 

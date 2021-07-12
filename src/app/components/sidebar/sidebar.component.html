@@ -2,10 +2,12 @@
   <section id="menu">
     <ul>
       <li>
-        <a routerLink="/" routerLinkActive="active-link">Lista de Clientes</a>
+        <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Lista de
+          Clientes</a>
       </li>
       <li>
-        <a href="/new" routerLinkActive="active-link">Cadastrar Novo Cliente</a>
+        <a routerLink="new" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Cadastrar Novo
+          Cliente</a>
       </li>
     </ul>
   </section>
