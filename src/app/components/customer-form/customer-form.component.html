@@ -1,0 +1,26 @@
+<div class="content">
+  <form (ngSubmit)="onSubmit()" [formGroup]="customerForm">
+    <input type="text" class="col-4" formControlName="firstName" placeholder="*Digite seu nome" [readonly]="deleteMode">
+    <input type="text" class="col-4" formControlName="lastName" placeholder="Digite seu sobrenome"
+      [readonly]="deleteMode">
+    <input type="number" min="1" max="110" class="col-4" formControlName="age" placeholder="*Digite sua idade"
+      [readonly]="deleteMode">
+    <input type="text" class="col-8" formControlName="street" placeholder="*Digite o nome da rua que você mora..."
+      [readonly]="deleteMode">
+    <input type="text" class="col-4" formControlName="neighborhood" placeholder="*Qual o seu bairro?"
+      [readonly]="deleteMode">
+    <input type="text" class="col-4" formControlName="city" placeholder="*Qual o nome da sua cidade?"
+      [readonly]="deleteMode">
+    <input type="text" class="col-4" formControlName="province" placeholder="*Digite o nome do seu estado"
+      [readonly]="deleteMode">
+    <input type="text" mask="99999-999" class="col-4" formControlName="zipCode" placeholder="*Insira aqui o seu CEP"
+      [readonly]="deleteMode">
+    <button *ngIf="!deleteMode" type="submit" class="success">
+      {{editMode ? 'Salvar Alteraçãos' : 'Finalizar Cadastro'}}
+    </button>
+    <div class="d-flex" *ngIf="deleteMode">
+      <button (click)="cancel()" class="cancel">Cancelar</button>
+      <button (click)="deleteCustomer()" class="danger">Confirmar Exclusão</button>
+    </div>
+  </form>
+</div>

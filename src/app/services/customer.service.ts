@@ -15,5 +15,23 @@ export class CustomerService {
     return this.http.get<Customer[]>(this.url);
   }
 
-  // public createCustomer(customer): Customer {}
+  public getCustomerById(customerId: string): Observable<Customer> {
+    return this.http.get<Customer>(`${this.url}/${customerId}`);
+  }
+
+  public createCustomer(customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(this.url, customer);
+  }
+
+  public updateCustomer(
+    customer: Partial<Customer>
+  ): Observable<Partial<Customer>> {
+    const customerId = customer.id;
+    delete customer.id;
+    return this.http.patch<Customer>(`${this.url}/${customerId}`, customer);
+  }
+
+  public deleteCustomer(customerId: string): Observable<Customer> {
+    return this.http.delete<Customer>(`${this.url}/${customerId}`);
+  }
 }

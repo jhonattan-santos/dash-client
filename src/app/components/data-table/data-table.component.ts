@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CustomerService } from './../../services/customer.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,17 +12,20 @@ import { Customer } from '../../models/customer';
 export class DataTableComponent implements OnInit {
   customers$: Observable<Customer[]> = new Observable();
 
-  constructor(private customerService: CustomerService) {}
+  constructor(
+    private customerService: CustomerService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.customers$ = this.customerService.getAllCustomers();
   }
 
   editCustomer(customer: Customer) {
-    alert(JSON.stringify(customer));
+    this.router.navigate(['edit', customer.id]);
   }
 
   deleteCustomer(customer: Customer) {
-    alert(JSON.stringify(customer));
+    this.router.navigate(['delete', customer.id]);
   }
 }

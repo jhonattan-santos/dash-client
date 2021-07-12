@@ -1,0 +1,34 @@
+form {
+  input {
+    padding: 15px 10px;
+    margin: 0 10px 20px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: transparent;
+    background: #ededed;
+    &.ng-dirty.ng-invalid {
+      border: 1px solid red;
+    }
+  }
+  button {
+    display: block;
+
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    &.success {
+      background-color: #2d9040;
+    }
+    &.danger {
+      background-color: red;
+    }
+    &.cancel {
+      background-color: #c4d600;
+      min-width: 140px;
+      margin-right: 10px;
+    }
+  }
+}

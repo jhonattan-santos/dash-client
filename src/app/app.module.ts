@@ -12,6 +12,8 @@ import { ListCustomerComponent } from './pages/list-customer/list-customer.compo
 import { EditCustomerComponent } from './pages/edit-customer/edit-customer.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { DeleteCustomerComponent } from './pages/delete-customer/delete-customer.component';
+import { CustomerFormComponent } from './components/customer-form/customer-form.component';
+import { NgxMaskModule } from 'ngx-mask';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import { DeleteCustomerComponent } from './pages/delete-customer/delete-customer
     EditCustomerComponent,
     DataTableComponent,
     DeleteCustomerComponent,
+    CustomerFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { DeleteCustomerComponent } from './pages/delete-customer/delete-customer
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

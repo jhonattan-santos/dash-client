@@ -9,7 +9,18 @@
       "neighborhood": "Continental",
       "city": "Osasco",
       "province": "SP",
-      "zipCode": "322280 - 888"
+      "zipCode": "322280-888"
+    },
+    {
+      "id": 2,
+      "firstName": "TEste ",
+      "lastName": "Id",
+      "age": "29",
+      "street": "Av DOi",
+      "neighborhood": "Coint",
+      "city": "SP",
+      "province": "SO",
+      "zipCode": "21515-222"
     }
   ]
 }
