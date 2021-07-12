@@ -1,10 +1,21 @@
 <table>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
+  <tr id="header">
+    <th>Nome</th>
+    <th>Sobrenome</th>
+    <th>Endereço</th>
+    <th>Ações</th>
   </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
+  <tr *ngFor="let customer of customers$ | async">
+    <td>{{customer.firstName}}</td>
+    <td>{{customer.lastName}}</td>
+    <td>{{customer.street}}</td>
+    <td class="actions">
+      <span (click)="editCustomer(customer)">
+        Editar
+      </span>
+      <span class="delete" (click)="deleteCustomer(customer)">
+        Excluir
+      </span>
+    </td>
   </tr>
 </table>

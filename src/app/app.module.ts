@@ -1,5 +1,4 @@
 import { HttpClientModule } from '@angular/common/http';
-import { MirageserverService } from './helper/mirageserver.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -31,7 +30,7 @@ import { DeleteCustomerComponent } from './pages/delete-customer/delete-customer
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [MirageserverService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

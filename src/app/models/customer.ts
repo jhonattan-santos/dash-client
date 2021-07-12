@@ -1,9 +1,10 @@
-import { Adress } from './adress';
-
 export interface Customer {
   firstName: string;
   lastName: string;
-  age: number
-  adress: Adress;
+  age: number;
+  street: string;
+  neighborhood: string;
+  city: string;
+  province: string;
+  zipCode: number;
 }
-

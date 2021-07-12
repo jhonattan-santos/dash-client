@@ -1,0 +1,15 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "Valmir",
+      "lastName": "Cunha",
+      "age": 32,
+      "street": "Av. Altino Pereira",
+      "neighborhood": "Continental",
+      "city": "Osasco",
+      "province": "SP",
+      "zipCode": "322280 - 888"
+    }
+  ]
+}
