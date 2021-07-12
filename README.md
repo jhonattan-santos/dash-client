@@ -1,4 +1,5 @@
 # Dashclient
+![Tela de Cadastro de Novos Clientes](https://github.com/wezss/dash-client/blob/main/src/assets/dashclient.png "Tela de Cadastro de Novos Clientes")
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
